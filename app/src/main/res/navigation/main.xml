@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    app:startDestination="@id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="io.koin.sharedinstance.vm.ui.main.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/to_demo_dialog"
+            app:destination="@id/nav_demo_dialog" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/nav_demo_dialog"
+        android:name="io.koin.sharedinstance.vm.ui.main.DemoDialogFragment"
+        android:label="DemoDialogFragment" />
+</navigation>
